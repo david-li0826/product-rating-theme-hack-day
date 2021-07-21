@@ -22,13 +22,6 @@
             "text_style": "subtitle"
           }
         },
-        "884e5684-ae65-4dcd-a27b-cfd16974e293": {
-          "type": "shopify:\/\/apps\/product-rating-hack-days\/blocks\/app-block\/7fd59e52-d288-449d-8f4d-6d89d54bb945",
-          "settings": {
-            "heading": "Product Rating",
-            "description": "A simple app block that shows the average star rating for a product."
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -66,7 +59,6 @@
         "vendor",
         "title",
         "subtitle",
-        "884e5684-ae65-4dcd-a27b-cfd16974e293",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -77,6 +69,44 @@
       "settings": {
         "enable_sticky_info": true,
         "enable_video_looping": false
+      }
+    },
+    "162689100280c26709": {
+      "type": "apps",
+      "blocks": {
+        "fe0d9839-8146-42c2-a761-62b6ba1e24ca": {
+          "type": "shopify:\/\/apps\/product-rating-hack-days\/blocks\/average-rating\/7fd59e52-d288-449d-8f4d-6d89d54bb945",
+          "settings": {
+            "stars_fill_color": "#94be46",
+            "star_size": 24,
+            "padding_x": 0,
+            "padding_y": 0,
+            "show_heading": true,
+            "heading": "Average Rating",
+            "product": "{{ product }}"
+          }
+        },
+        "88831fbb-dc38-45e1-a66c-c3d6f457cd42": {
+          "type": "shopify:\/\/apps\/product-rating-hack-days\/blocks\/product-reviews\/7fd59e52-d288-449d-8f4d-6d89d54bb945",
+          "settings": {
+            "stars_fill_color": "#94be46",
+            "star_size": 24,
+            "padding_x": 50,
+            "padding_y": 0,
+            "heading": "Customer Reviews",
+            "no_reviews_action_text": "Be the first to review this product.",
+            "existing_reviews_action_text": "Write Review",
+            "allow_unverified_reviews": false,
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "fe0d9839-8146-42c2-a761-62b6ba1e24ca",
+        "88831fbb-dc38-45e1-a66c-c3d6f457cd42"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "product-recommendations": {
@@ -92,6 +122,7 @@
   },
   "order": [
     "main",
+    "162689100280c26709",
     "product-recommendations"
   ]
 }
